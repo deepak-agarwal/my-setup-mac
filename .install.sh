@@ -10,6 +10,10 @@ echo "Installing Brew..."
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew analytics off
 
+## Adds ssh to git
+brew install gh
+gh auth login
+
 ## Taps
 echo "Tapping Brew..."
 brew tap homebrew/cask-fonts
