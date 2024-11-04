@@ -49,7 +49,8 @@ brew install --cask font-fira-code
 
 # Copying and checking out configuration files
 echo "Planting Configuration Files..."
-[ ! -d "$HOME/.config" ] && git clone --bare git@github.com:deepak-agarwal/my-setup-mac.git $HOME/.config
+[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:deepak-agarwal/my-setup-mac.git $HOME/dotfiles
+git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout main
 
 # Installing Fonts
 git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
